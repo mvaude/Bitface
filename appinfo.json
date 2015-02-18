@@ -1,7 +1,10 @@
 {
-    "appKeys": {},
+    "appKeys": {
+		"KEY_HIGH": 1,
+		"KEY_LAST": 0
+	},
     "capabilities": [
-        "location"
+	""
     ],
     "companyName": "maxime.vaude@gmail.com",
     "longName": "BitFace",
