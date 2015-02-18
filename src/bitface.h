@@ -20,5 +20,7 @@ TextLayer			*s_time_layer;
 
 void				main_window_load(Window *window);
 void				main_window_unload(Window *window);
+void				tick_handler(struct tm *tick_time, TimeUnits units_changed);
+void				update_time();
 
 #endif
