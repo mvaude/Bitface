@@ -13,9 +13,12 @@
 #ifndef BITFACE_H
 # define BITFACE_H
 
+# include <pebble.h>
+
 Window				*s_main_window;
+TextLayer			*s_time_layer;
 
 void				main_window_load(Window *window);
-void				
+void				main_window_unload(Window *window);
 
 #endif
