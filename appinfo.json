@@ -1,0 +1,19 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        "location"
+    ],
+    "companyName": "maxime.vaude@gmail.com",
+    "longName": "BitFace",
+    "projectType": "native",
+    "resources": {
+        "media": []
+    },
+    "shortName": "BitFace",
+    "uuid": "072e8380-ea20-4281-bd4b-4f6d22c7d73e",
+    "versionCode": 1,
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": true
+    }
+}
