@@ -34,5 +34,9 @@ void				main_window_load(Window *window);
 void				main_window_unload(Window *window);
 void				tick_handler(struct tm *tick_time, TimeUnits units_changed);
 void				update_time();
+void				inbox_received_callback(DictionaryIterator *iterator, void *context);
+void				inbox_dropped_callback(AppMessageResult reason, void *context);
+void				outbox_failed_callback(DictionaryIterator *iterator, AppMessageResult reason, void *context);
+void				outbox_sent_callback(DictionaryIterator *iterator, void *context);
 
 #endif
