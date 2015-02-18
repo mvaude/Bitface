@@ -6,7 +6,7 @@ void			update_time()
 	struct tm	*tick_time;
 
 	static char	buffer[5];
-	strftime(buffer, sizeof("00:00"), clock_is_24h_style() ? "%H:%M" : "%I:%M, tick_time);
+	strftime(buffer, sizeof("00:00"), clock_is_24h_style() ? "%H:%M" : "%I:%M", tick_time);
 /*
 	if (clock_is_24h_style() == true)
 		strftime(buffer, sizeof("00:00"), "%H:%M", tick_time);
