@@ -8,7 +8,7 @@ void			inbox_received_callback(DictionaryIterator *iterator, void *context)
 
 	Tuple		*t = dict_read_first(iterator);
 
-	while (!t)
+	while (t)
 	{
 		switch (t->key)
 		{
