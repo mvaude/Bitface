@@ -17,6 +17,7 @@
 
 Window				*s_main_window;
 TextLayer			*s_time_layer;
+TextLayer			*s_info_layer;
 
 void				main_window_load(Window *window);
 void				main_window_unload(Window *window);
