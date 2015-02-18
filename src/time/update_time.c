@@ -4,11 +4,10 @@ void			update_time()
 {
 	time_t		temp;
 	struct tm	*tick_time;
-	static char	buffer[5];
+	static char	buffer[] = "00:00";
 
 	temp = time(NULL);
-	*tick_time = localtime(&temp);
-	buffer[] = "00:00";
+	tick_time = localtime(&temp);
 	strftime(buffer, sizeof("00:00"), clock_is_24h_style() ? "%H:%M" : "%I:%M", tick_time);
 /*
 	if (clock_is_24h_style() == true)
