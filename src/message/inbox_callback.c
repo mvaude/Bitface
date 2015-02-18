@@ -13,7 +13,7 @@ void			inbox_received_callback(DictionaryIterator *iterator, void *context)
 		switch (t->key)
 		{
 			case KEY_LAST:
-				snrpintf(last_buffer, sizeof(last_buffer), "%d", (int)t->value->int32);
+				snpintf(last_buffer, sizeof(last_buffer), "%d", (int)t->value->int32);
 				break;
 			case KEY_HIGH:
 				snprintf(high_buffer, sizeof(high_buffer), "%d", (int)t->value->int32);
