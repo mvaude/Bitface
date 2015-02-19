@@ -9,7 +9,7 @@ void			inbox_received_callback(DictionaryIterator *iterator, void *context)
 	static char	volume_buffer[8];
 	static char	bid_buffer[8];
 	static char	ask_buffer[8];
-	static char	info_layer_buffer[32];
+	static char	info_layer_buffer[128];
 
 	Tuple		*t = dict_read_first(iterator);
 
