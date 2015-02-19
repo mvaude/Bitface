@@ -1,5 +1,10 @@
 {
     "appKeys": {
+		"KEY_ASK": 6,
+		"KEY_BID": 5,
+		"KEY_VOLUME": 4,
+		"KEY_LOW": 3,
+		"KEY_VWAP": 2,
 		"KEY_HIGH": 1,
 		"KEY_LAST": 0
 	},

@@ -4,6 +4,11 @@ void			inbox_received_callback(DictionaryIterator *iterator, void *context)
 {
 	static char	last_buffer[8];
 	static char	high_buffer[8];
+	static char	vwap_buffer[8];
+	static char	low_buffer[8];
+	static char	volume_buffer[8];
+	static char	bid_buffer[8];
+	static char	ask_buffer[8];
 	static char	info_layer_buffer[32];
 
 	Tuple		*t = dict_read_first(iterator);
@@ -18,6 +23,21 @@ void			inbox_received_callback(DictionaryIterator *iterator, void *context)
 			case KEY_HIGH:
 				snprintf(high_buffer, sizeof(high_buffer), "%d", (int)t->value->int32);
 				break;
+			case KEY_VWAP:
+				snprintf(vwap_buffer, sizeof(vwap_buffer), "%d", (int)t->value->int32);
+				break;
+			case KEY_LOW:
+				snprintf(low_buffer, sizeof(low_buffer), "%d", (int)t->value->int32);
+				break;
+			case KEY_VOLUME:
+				snprintf(volume_buffer, sizeof(volume_buffer), "%d", (int)t->value->int32);
+				break;
+			case KEY_BID:
+				snprintf(bid_buffer, sizeof(bid_buffer), "%d", (int)t->value->int32);
+				break;
+			case KEY_ASK:
+				snprintf(ask_buffer, sizeof(ask_buffer), "%d", (int)t->value->int32);
+				break;
 			default:
 				APP_LOG(APP_LOG_LEVEL_ERROR, "Key %d not recognized!", (int)t->key);
 				break;
@@ -25,7 +45,10 @@ void			inbox_received_callback(DictionaryIterator *iterator, void *context)
 
 		t = dict_read_next(iterator);
 	}
-	snprintf(info_layer_buffer, sizeof(info_layer_buffer), "L: %s | H: %s", last_buffer, high_buffer);
+	snprintf(info_layer_buffer, sizeof(info_layer_buffer), "Last: %s | High: %s\n", last_buffer, high_buffer);
+	snprintf(info_layer_buffer, sizeof(info_layer_buffer), "vwap: %s | low: %s\n\n\n\n", vwap_buffer, low_buffer);
+	snprintf(info_layer_buffer, sizeof(info_layer_buffer), "Volume: %s\n", volume_buffer);
+	snprintf(info_layer_buffer, sizeof(info_layer_buffer), "bid: %s | ask: %s", bid_buffer, ask_buffer);
 	text_layer_set_text(s_info_layer, info_layer_buffer);
 }
 
