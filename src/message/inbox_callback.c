@@ -45,7 +45,7 @@ void			inbox_received_callback(DictionaryIterator *iterator, void *context)
 
 		t = dict_read_next(iterator);
 	}
-	snprintf(info_layer_buffer, sizeof(info_layer_buffer), "Last: %s | High: %s\nvwap: %s | low: %s\n\n\nVolume: %s\nbid: %s | ask: %s", last_buffer, high_buffer, vwap_buffer, low_buffer, volume_buffer, bid_buffer, ask_buffer);
+	snprintf(info_layer_buffer, sizeof(info_layer_buffer), "Last: %s | High: %s\n\nvwap: %s | low: %s\n\n\n\n\n\nVolume: %s\n\nbid: %s | ask: %s", last_buffer, high_buffer, vwap_buffer, low_buffer, volume_buffer, bid_buffer, ask_buffer);
 	text_layer_set_text(s_info_layer, info_layer_buffer);
 }
 
